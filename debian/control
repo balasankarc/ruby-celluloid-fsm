@@ -14,7 +14,6 @@ Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-celluloid-fsm.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-celluloid-fsm.git
 Homepage: https://github.com/celluloid/celluloid-fsm
-Testsuite: autopkgtest-pkg-ruby
 XS-Ruby-Versions: all
 
 Package: ruby-celluloid-fsm
@@ -28,5 +27,9 @@ Depends: bundler,
          ruby-timers (>= 4.0.0),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: ruby-celluloid (<< 0.17~)
+Replaces: ruby-celluloid (<< 0.17~) 
 Description: Celluloid Finite State Machines
- Simple finite state machines with integrated Celluloid timeout support.
+ This gem provides simple finite state machines with integrated Celluloid 
+ timeout support. Celluloid is an actor-based concurrent object framework for 
+ Ruby.
